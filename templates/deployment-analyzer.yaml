@@ -92,8 +92,6 @@ spec:
           value: "elasticsearchtopology"
         - name: SKYDIVE_STORAGE_ELASTICSEARCHFLOW_DRIVER
           value: "elasticsearch"
-        - name: SKYDIVE_STORAGE_ELASTICSEARCHTOPOLOGY_DRIVER
-          value: "elasticsearch"
         - name: SKYDIVE_STORAGE_ELASTICSEARCHFLOW_HOST
           value: {{ .Values.storage.elasticsearch.host }}:{{ .Values.storage.elasticsearch.port }}
         - name: SKYDIVE_STORAGE_ELASTICSEARCHFLOW_INDICES_TO_KEEP
@@ -102,6 +100,8 @@ spec:
           value: {{ .Values.storage.flows.indexEntriesLimit | quote }}
         - name: SKYDIVE_STORAGE_ELASTICSEARCHFLOW_MAXCONNS
           value: "10"
+        - name: SKYDIVE_STORAGE_ELASTICSEARCHTOPOLOGY_DRIVER
+          value: "elasticsearch"
         - name: SKYDIVE_STORAGE_ELASTICSEARCHFLOW_BULK_MAXDOCS
           value: "1000"
         - name: SKYDIVE_STORAGE_ELASTICSEARCHFLOW_BULK_MAXDELAY
